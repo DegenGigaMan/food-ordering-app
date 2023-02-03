@@ -1,7 +1,13 @@
-import MealsSummary from "./MealsSummary/MealsSummary"
+import MealsList from "./MealsList/MealsList";
+import MealsSummary from "./MealsSummary/MealsSummary";
 
 const Meals = () => {
-  return <MealsSummary />;
-}
+  return (
+    <>
+      <MealsSummary />
+      <MealsList />
+    </>
+  );
+};
 
 export default Meals;
