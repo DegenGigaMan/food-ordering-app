@@ -1,10 +1,11 @@
 import styles from './Input.module.css';
 
-const Input = () => {
+const Input = (props) => {
+
   return (
     <div className={styles.input}>
       <label>Amount</label>
-      <input  type="number" />
+      <input onChange={props.onChange} value={props.value}  type="number" />
     </div>
   );
 };

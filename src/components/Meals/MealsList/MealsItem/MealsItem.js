@@ -1,16 +1,16 @@
 import MealsItemForm from "../MealsItemForm/MealsItemForm";
 import styles from "./MealsItem.module.css";
 
-const MealsItem = () => {
+const MealsItem = (props) => {
   return (
     <li className={styles.meal}>
       <div>
-        <h3>Sushi</h3>
-        <div className={styles.description}>Finest fish and veggies</div>
-        <div className={styles.price}>$22.99</div>
+        <h3>{props.meal.name}</h3>
+        <div className={styles.description}>{props.meal.description}</div>
+        <div className={styles.price}>${props.meal.price}</div>
       </div>
       <div>
-        <MealsItemForm />
+        <MealsItemForm meal={props.meal}/>
       </div>
     </li>
   );
