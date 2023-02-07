@@ -13,7 +13,7 @@ const MealsItemForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    cartContext.onAdd(+amountInput, props.meal);
+    cartContext.onAddToCart(+amountInput, props.meal);
   };
 
   return (

@@ -7,7 +7,6 @@ import CartItem from "./CartItem/CartItem";
 const Cart = (props) => {
   const cartContext = useContext(CartContext);
 
-
   return (
     <Modal onClick={props.onClick}>
       <ul className={styles["cart-items"]}>
@@ -20,7 +19,7 @@ const Cart = (props) => {
 
       <div className={styles.total}>
         <div>Total Amount</div>
-        <div>$80.99</div>
+        <div>${cartContext.total}</div>
       </div>
       <div className={styles.actions}>
         <button className={styles["button--alt"]} onClick={props.onClick}>Close</button>
