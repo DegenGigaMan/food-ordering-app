@@ -8,6 +8,9 @@ const MealsItemForm = (props) => {
   const [amountInput, setAmountInput] = useState(1);
 
   const changeHandler = (props) => {
+    if (props.target.value < 0) {
+      return;
+    }
     setAmountInput(props.target.value);
   };
 
@@ -18,7 +21,19 @@ const MealsItemForm = (props) => {
 
   return (
     <form onSubmit={submitHandler} className={styles.form}>
-      <Input onChange={changeHandler} value={amountInput}/>
+      <Input
+        label="Amount"
+        onChange={changeHandler}
+        value={amountInput}
+        input={{
+          id: "amount" + props.id,
+          type: "number",
+          min: "1",
+          max: "5",
+          step: "1",
+          value: "1",
+        }}
+      />
       <button type="submit">+Add</button>
     </form>
   );

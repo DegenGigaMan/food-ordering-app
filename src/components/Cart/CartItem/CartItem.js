@@ -13,12 +13,13 @@ const CartItem = (props) => {
   const removeItem = () => {
     Cart.onRemoveItem(props.item.name);
   }
+  
   return (
     <li className={styles["cart-item"]}>
       <div>
         <h2>{props.item.name}</h2>
         <div className={styles.summary}>
-          <span className={styles.price}>{props.item.price}</span>
+          <span className={styles.price}>${props.item.price.toFixed(2)}</span>
           <span className={styles.amount}>{props.item.amount}x</span>
         </div>
       </div>
