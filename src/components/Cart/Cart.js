@@ -19,7 +19,7 @@ const Cart = (props) => {
 
       <div className={styles.total}>
         <div>Total Amount</div>
-        <div>${cartContext.total}</div>
+        <div>${cartContext.orderTotal}</div>
       </div>
       <div className={styles.actions}>
         <button className={styles["button--alt"]} onClick={props.onClick}>Close</button>
